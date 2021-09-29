@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+/*----------------Task One-----------------*/
+
+function findPeopleFromGryffindor(obj) {
+  obj.forEach(({ firstName, lastName, house }) => {
+    if (house === "Gryffindor") {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+/*----------------Task Two-----------------*/
+
+function findTeachersWithPets(obj) {
+  obj.filter(({ firstName, lastName, pet, occupation }) => {
+    if (occupation === "Teacher" && pet !== null) {
+      console.log(`${firstName} ${lastName}`);
+    }
+  });
+}
+
+console.log(findPeopleFromGryffindor(hogwarts));
+console.log(findTeachersWithPets(hogwarts));
